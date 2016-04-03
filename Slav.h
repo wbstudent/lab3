@@ -3,6 +3,7 @@
 #include <vector>
 
 using namespace std;
+enum sex {male = 0, female = 1};
 
 class Slav
 {
@@ -24,4 +25,6 @@ public:
 	int id() { return _id; }
 
 	string description();
+
+	sex sex_ret() { return (_name[_name.length()-1] == 'a') ? female : male;}
 };
